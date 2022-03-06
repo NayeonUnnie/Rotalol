@@ -19,8 +19,18 @@ export interface Champion {
   title:   string;
   blurb:   string;
   info:    string;
-  image:   string;
+  image:   Image;
   tags:    string[];
   partype: string;
   stats:   { [key: string]: number };
+}
+
+export interface Image{
+  full:   string;
+  sprite: string;
+  group:  string;
+  x:      number;
+  y:      number;
+  w:      number;
+  h:      number;
 }

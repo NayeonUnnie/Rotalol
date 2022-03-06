@@ -1,8 +1,12 @@
-<mat-toolbar>
+<mat-toolbar class="toolbar">
   <span class="span">Liste des champions gratuits cette semaine</span>
 </mat-toolbar>
 
-<mat-list *ngFor="let item of tableChampionsName">
-  <mat-list-item>{{ item }}</mat-list-item>
-  <img matListAvatar src="">
-</mat-list>
+<mat-grid-list cols="4" rowHeight="2.5  :1">
+  <mat-grid-tile *ngFor="let item of tableChampionsName">
+    <div class="tiles">
+      <div class="championName">{{ item[0] }}</div>
+      <img class="championAvatar" inline="true" matListAvatar src="{{item[1]}}">
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
