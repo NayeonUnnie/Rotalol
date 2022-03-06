@@ -6,7 +6,7 @@
   <mat-grid-tile *ngFor="let item of tableChampionsName">
     <div class="tiles">
       <div class="championName">{{ item[0] }}</div>
-      <img class="championAvatar" inline="true" matListAvatar src="{{item[1]}}">
+      <img class="championAvatar" matListAvatar src="{{item[1]}}" alt="Image de {{item[0]}}">
     </div>
   </mat-grid-tile>
 </mat-grid-list>

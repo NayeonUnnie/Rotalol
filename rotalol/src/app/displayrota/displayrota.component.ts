@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {LolApiService} from "../lol-api.service";
-import {LolInfos} from "../rotation";
 
 @Component({
   selector: 'app-displayrota',
