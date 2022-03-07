@@ -7,12 +7,14 @@ import {ChampionsInfo, LolInfos} from "./rotation";
 })
 export class LolApiService {
 
+  private apikey = "RGAPI-ddd5725c-3678-4f9c-8bb7-a3d5d25b6cf5";
+
   constructor(private http : HttpClient) {
 
   }
 
   retrieveRota(){
-    return this.http.get<LolInfos>("https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-3ee882dc-7869-457e-af12-0d48de938b5b");
+    return this.http.get<LolInfos>("https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=" + this.apikey);
   }
 
   retrieveChampionById(ids : Number[]){
